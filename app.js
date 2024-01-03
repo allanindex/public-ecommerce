@@ -14,7 +14,7 @@ const flash = require("connect-flash")
 
 app.use(
     session({
-      secret: 'ghgfdkhlfjjodghsisidg',
+      secret: 'your secret',
       resave: true,
       saveUninitialized: true,
     })
