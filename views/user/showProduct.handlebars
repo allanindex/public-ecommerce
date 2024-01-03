@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/showProduct.css">
+    <title>Document</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="container1">
+                <div class="productImg">
+                    <img src="/img/uploads/{{product.images.[0]}}" id="mainImg">
+                </div>
+                <div class="productInfo">
+                    <h1>{{product.name}}</h1>
+                    <p>{{product.description}}</p>
+                    <div class="price">
+                       R$ {{product.price}}
+                    </div>
+                    Produtos em estoque:
+                     <div class="stocks">
+                        {{#each product.stock}}
+                            <div class="stock">
+                                <input type="color" name="" value="{{cor}}" id="" disabled>
+                                {{quantidade}}
+                            </div>
+                        {{/each}}
+                        
+                    </div>
+                    <button id="cartButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                         Adicionar ao carrinho  
+                    </button>
+                    <form action="/admin/deliveryCalc" method="post">
+                        <input type="hidden" name="id" value="{{product._id}}">
+                        Calcular frete
+                        <br>
+                        <input type="number" name="cep" id="cep" placeholder="xxx.xxx.xxx-xx">
+                        <button type="submit">Calcular</button>
+                    </form>
+                    {{#if company}}
+                        <div class="deliveryCompany">
+                           <div class="tableColumn">
+                                <strong>Companhia</strong>
+                                {{company}}
+                            </div>
+                           <div class="tableColumn">
+                                <strong>Valor R$</strong>
+                                {{price}}
+                            </div>
+                           <div class="tableColumn">
+                                <strong>Tempo de entrega</strong>
+                                {{time}} dias aproximadamente.
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/showProduct.js"></script>
+</html>

@@ -1,0 +1,116 @@
+@media screen and (min-width: 280px){
+    #newCategoryForm{
+        width: 75vw;
+        height: 45vh;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+        border: 2px solid #969696;
+        padding-top: 20px;
+    }
+    
+    #newCategoryForm label{
+        color: #969696;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-option{
+        text-align: left;
+    }
+    .form-option input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #969696;
+        width: 10 0%;
+       font-size: 1rem;
+       height: 35px;
+       text-align: center;
+       margin: auto;
+    }
+    #newCategoryButton{
+        width: 75%;
+        border-radius: 15px;
+        height: 40px;
+        background-color: var(--color3);
+        font-size: 1rem;
+        color: white;
+        border: none;
+    }
+    .error{
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+}
+@media  screen  and (min-width: 1024px){
+    #newCategoryForm{
+        width: 20vw;
+        height: 40vh;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        border: 2px solid #969696;
+        padding-top: 20px;
+    }
+    
+    #newCategoryForm label{
+        color: #969696;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-option{
+        text-align: left;
+    }
+    .form-option input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #969696;
+        width: 10 0%;
+       font-size: 1rem;
+       height: 35px;
+       text-align: center;
+       margin: auto;
+    }
+    #newCategoryButton{
+        width: 75%;
+        border-radius: 15px;
+        height: 40px;
+        background-color: var(--color3);
+        font-size: 1rem;
+        color: white;
+        border: none;
+    }
+    .error{
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,102 @@
+{{#each error}}
+    <div class="error">{{texto}}</div>
+{{/each}}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/newProduct.css">
+    <title>Novo produto</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/admin/newProduct" id="newProductForm" method="post" enctype="multipart/form-data">
+            <div class="form-section">
+                <div class="form-section-content content-1">
+                    <h1>Novo produto</h1>
+                    <div class="form-options">
+                        <div class="form-option">
+                            <label for="name">Nome do produto:</label>
+                            <input type="text" name="name" id="name" autocomplete="off">
+                        </div>
+                        <div class="form-option">
+                            <label for="description">Descrição:</label>
+                            <input type="text" name="description" id="description" autocomplete="off">
+                        </div>
+                        <div class="form-option">
+                            <label for="brand">Marca:</label>
+                            <input type="text" name="brand" id="brand" autocomplete="off">
+                        </div>
+
+                        <div class="form-option">
+                            <label for="images">Images</label>
+                            <input type="file" name="images" id="images" multiple>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button disabled id="firstButton">Anterior</button>
+                        <button type="button" class="nextButton">Próximo</button>
+                    </div>
+                </div>
+                <img src="/img/fundoazul.jpg" class="img" alt="">
+            </div>
+
+
+            <div class="form-section">
+                <div class="form-section-content content-2">
+                    <h1>Novo produto</h1>
+                    <div class="form-options">
+                        <div class="form-option">
+                           <label for="price">Preço unitário (R$)</label>
+                            <input type="number" name="price" id="price" step=".01">
+                        </div>
+                        <div class="form-option">
+                            <label for="weight">Peso (em gramas):</label>
+                            <input type="number" min="0" name="weight" id="weight" autocomplete="off">
+                        </div>
+                        <label for="">Variações do produto:</label>
+                        <button type="button" id="newVariationButton">Nova variação</button><button type="button" id="cleanColorsButton">Limpar</button>
+                        <br>
+                        <div class="variations">
+                            
+                        </div>
+                    </div>
+                     <div class="buttons">
+                        <button type="button" class="previousButton">Anterior</button>
+                        <button type="button" class="nextButton">Próximo</button>
+                    </div>
+                </div>
+                <img src="/img/fundoazul.jpg" class="img" alt="">
+            </div>
+
+
+
+            <div class="form-section">
+                 <div class="form-section-content content-3">
+                    <h1>Novo produto</h1>
+                    <div class="form-options">
+                        <h4>Categorias</h4>
+                        
+                        <div class="categories">
+                            {{#each categories}}
+                               <div class="category">
+                                   <input type="checkbox" name="category" id="{{name}}" value="{{name}}">
+                                   <label for="{{name}}">{{name}}</label>
+                               </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="previousButton">Anterior</button>
+                        <button type="submit" id="registerProduct">Cadastrar produto</button>
+                    </div>
+                 </div>
+                <img src="/img/fundoazul.jpg" class="img" alt="">
+            </div>
+            
+        </form>
+    </div>
+    <script src="/js/newProduct.js"></script>
+</body>
+</html>

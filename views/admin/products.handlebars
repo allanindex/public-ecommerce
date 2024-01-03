@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/products.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <h1>Produtos cadastrados</h1>
+            <a href="/admin/newProduct"><button>Cadastrar produto</button></a>
+            <hr>
+        </div>
+        <div class="container2">
+            {{#each products}}
+                <a href="/public/showProduct/{{_id}}">
+                    <div class="product">
+                        <img src="/img/uploads/{{images.[0]}}" alt="" class="imgPreview">
+                        <div class="price">R$ {{price}}</div>
+                        <div class="productText">
+                            <span class="textName"><p><strong>Nome:</strong> {{name}}</p></span>
+                            <br>
+                            <span><strong>ID:</strong> {{_id}}</span>
+                             <div class="stocks">
+                                 {{#each stock}}
+                                    <div class="stock">
+                                        <input type="color" name="" value="{{cor}}" id="" disabled>
+                                        {{quantidade}}
+                                    </div>
+                                {{/each}}
+                             </div>
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+    </div>
+
+</body>
+</html>

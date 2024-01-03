@@ -1,0 +1,22 @@
+:root{
+    --color1: #04b3cb;
+    --color2: #e8e8e8;
+    --color3: #323232;
+    --color4: #28965A;
+    --color5: #D84727;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+:focus{
+    outline: none;
+}
+.container{
+    min-height: 85vh;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,245 @@
+@media screen and (min-width: 280px){
+    body{
+        background-color: var(--color2);
+    }
+    .pc{
+        display: none;
+    }
+   .container1{
+    display: none;
+   }
+   .container1Mob{
+    background-color: #53b7c4;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+   }
+  
+   .slides{
+    width: 300%;
+    height: 65vh;
+    display: flex;
+   }
+   .first{
+    width: 33.3%;
+   }
+   .first h2{
+    color: white;
+   }
+   .second, .third{
+    width: 33.3%;
+    position: relative;
+   }
+   .divImg3{
+    height: 65vh;
+    padding-top: 10px;
+    background-color: #edbfd9;
+   }
+   .divImg3 h2{
+    text-align: center;
+   }
+   .slide{
+    transition: 1.5s;
+   }
+   .slide img{
+    width: 100%;
+   }
+   .slide h2:not(.third .divImg3 h2){
+    margin: 15px 0 20px 0;
+    text-align: center;
+   }
+   .third .divImg3 h2{
+    color: rgb(246, 0, 90);
+    margin-top: 5px;
+   }
+
+   .manual-navigation{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+   }
+   .manual-btn{
+    display: none;
+   }
+   .manual-btn:not(:last-child){
+    margin-right: 20px;
+   }
+   .manual-btn:hover{
+    background-color: white;
+    border-color: #20ea3e;
+   }
+
+   #radio1:checked ~ .first{
+        margin-left: 0;
+   }
+
+   #radio2:checked ~ .first{
+    margin-left: -33.3%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -66.6%;
+    }
+
+   input[type = "radio"]{
+    display: none;
+   }
+   .first img{
+    animation:  pulse 1.3s infinite;
+   }
+   .second{
+        background-color: white;
+   }
+   .second h2{
+    color: black;
+    text-align: center;
+   }
+   
+   @keyframes pulse {
+    0%{
+        transform: scale(1.0);
+    }
+    10%{
+        transform: scale(1.005);
+    }
+    20%{
+        transform: scale(1.01);
+    }
+    30%{
+        transform: scale(1.015);
+    }
+    40%{
+        transform: scale(1.020);
+    }
+    50%{
+        transform: scale(1.03);
+    }
+    60%{
+        transform: scale(1.020);
+    }
+    70%{
+        transform: scale(1.015);
+    }
+    80%{
+        transform: scale(1.01);
+    }
+    90%{
+        transform: scale(1.005);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+   }
+
+
+   .container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    }
+    .container3 h2, .container2 h2{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .categorie{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container3-icon{
+        width: 80px;
+        margin-bottom: -30px;
+    }
+    .second img{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        background-color: var(--color2)
+    }
+    .pc{
+        background-color: var(--color1);
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pc img{
+        width: 370px;
+        height: 370px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container1{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+    gap: 40px;
+    }
+    .container1Mob{
+        display: none;
+    }
+    .container-section{
+        width: 55vw;
+    }
+    .container-section p{
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    #sale{
+        color: rgb(0, 207, 24);
+    }
+    .container3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .container3 h2{
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .categories{
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+    }
+    .container3 .categorie{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+        font-size: 1.3rem;
+    }
+    .container3 .categorie:hover{
+        border: 2px solid var(--color1);
+        border-radius: 20px;
+        padding: 28px;
+    }
+    .container3 h2, .container2 h2{
+        text-align: center;
+        margin: 30px 0;
+        font-size: 2.5rem;
+    }
+    .container3 span{
+        margin-top: 0;
+    }
+    .container3-icon{
+        width: 120px;
+    }
+}

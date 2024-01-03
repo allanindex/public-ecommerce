@@ -1,0 +1,25 @@
+{{#each error}}
+    <div class="error">{{texto}}</div>
+{{/each}}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/newCategory.css">
+    <title>New categorie</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/admin/newCategory" id="newCategoryForm" method="post">
+            <h1>Nova categoria</h1>
+            <div class="form-option">
+                <label for="category">Nome:</label>
+                <br>
+                <input type="text" name="category" id="inputCategory">
+            </div>
+            <button type="submit" id="newCategoryButton">Adicionar categoria</button>
+        </form>
+    </div>
+</body>
+</html>
